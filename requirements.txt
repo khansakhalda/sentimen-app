@@ -1,0 +1,16 @@
+streamlit
+pandas
+numpy
+scikit-learn
+nltk
+wordcloud
+emoji==2.14.0
+google-play-scraper>=1.2.6
+matplotlib
+python-dateutil
+tqdm
+Sastrawi
+IPython
+openpyxl
+google-generativeai>=0.7.0
+google-genai>=0.1.0
