@@ -816,14 +816,13 @@ def render():
     tfidf_path = "data/tfidf_features_app_source_getcontact.csv"
 
     # ----------------- TAMPILKAN HASIL -----------------
-    if st.session_state.get("res_tfidf_feat"):
+    if os.path.exists(tfidf_path):
 
-        feat_path = st.session_state["res_tfidf_feat"]
-        st.caption(f"TF-IDF Features: {os.path.basename(feat_path)}")
+        st.caption(f"TF-IDF Features: {os.path.basename(tfidf_path)}")
 
         try:
             df_feat = pd.read_csv(
-                feat_path,
+                tfidf_path,
                 usecols=["term", "idf", "tfidf"],
                 dtype={"term": str, "idf": float, "tfidf": float}
             )
@@ -911,7 +910,7 @@ def render():
         )
 
     else:
-        st.warning("File label hasil InSet tidak ditemukan.")
+        st.error("File TF-IDF tidak ditemukan! Pastikan file berada di folder /data/")
 
     st.divider()
 
