@@ -25,24 +25,41 @@ Aplikasi ini dibuat untuk:
 ---
 
 ## 🧠 Metode yang Digunakan
-Aplikasi ini menggunakan kombinasi metode **Lexicon-Based** dan **Machine Learning**, yaitu:
+Aplikasi ini menggunakan kombinasi metode **Lexicon-Based** dan **Machine Learning** untuk
+melakukan analisis sentimen ulasan pengguna, dengan tahapan dan metode sebagai berikut:
 
 - **InSet Lexicon**  
-  Digunakan untuk pelabelan otomatis sentimen ulasan  
-  - Skor > 0 → Positif  
-  - Skor < 0 → Negatif  
-  - Skor = 0 → Netral (tidak dianalisis lebih lanjut)
+  InSet Lexicon merupakan kamus sentimen berbahasa Indonesia yang berisi daftar kata positif
+  dan negatif beserta bobot nilainya. Metode ini digunakan untuk melakukan **pelabelan otomatis
+  sentimen ulasan** berdasarkan akumulasi skor kata dalam setiap ulasan.  
+  - Skor > 0 → **Sentimen Positif**  
+  - Skor < 0 → **Sentimen Negatif**  
+  - Skor = 0 → **Sentimen Netral** (tidak dilanjutkan ke tahap klasifikasi)
 
 - **TF-IDF (Term Frequency – Inverse Document Frequency)**  
-  Digunakan untuk ekstraksi fitur teks
+  Metode TF-IDF digunakan untuk **ekstraksi fitur teks**, dengan mengubah ulasan dalam bentuk
+  teks menjadi representasi numerik berdasarkan tingkat kepentingan suatu kata dalam dokumen
+  dan keseluruhan dataset.
 
 - **Support Vector Machine (SVM)**  
-  - Kernel Linear  
-  - Kernel RBF  
-  Evaluasi dilakukan dengan berbagai rasio data latih dan data uji
+  Support Vector Machine merupakan metode klasifikasi berbasis machine learning yang bertujuan
+  untuk mencari **hyperplane optimal** sebagai pemisah antar kelas sentimen. Pada penelitian
+  ini, SVM digunakan untuk mengklasifikasikan sentimen ulasan ke dalam kelas positif dan negatif
+  dengan membandingkan dua jenis kernel, yaitu:
 
-- **Analisis Tren Sentimen**  
-  Berdasarkan pembagian waktu per kuartal
+  - **Kernel Linear**  
+    Kernel Linear digunakan ketika data cenderung dapat dipisahkan secara linear. Kernel ini
+    memiliki kompleksitas yang lebih rendah dan cocok untuk dataset dengan dimensi fitur yang
+    tinggi seperti hasil ekstraksi TF-IDF.
+
+  - **Kernel Radial Basis Function (RBF)**  
+    Kernel RBF digunakan untuk menangani data yang memiliki pola non-linear. Kernel ini mampu
+    memetakan data ke dimensi yang lebih tinggi sehingga dapat menghasilkan pemisahan kelas yang
+    lebih fleksibel.
+
+  Evaluasi performa model dilakukan menggunakan beberapa rasio data latih dan data uji untuk
+  mengetahui kernel SVM yang memberikan hasil klasifikasi terbaik berdasarkan metrik evaluasi
+  yang digunakan.
 
 ---
 
