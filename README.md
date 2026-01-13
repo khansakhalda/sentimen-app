@@ -114,6 +114,15 @@ Analisis dilakukan menggunakan pendekatan **filtering berbasis kata kunci (regex
 
 ## 🚀 Cara Menjalankan Aplikasi
 
+### 🌐 Menjalankan Aplikasi Melalui Web
+Aplikasi ini juga dapat dijalankan secara **online melalui web**, karena telah di-hosting
+menggunakan Streamlit Cloud. Pengguna dapat langsung mengakses aplikasi tanpa perlu melakukan
+instalasi tambahan melalui tautan berikut:
+
+🔗 **https://sentimen-getcontact.streamlit.app/**
+
+---
+
 ### ▶️ Menjalankan Secara Lokal
 
 1. Clone repositori ini:
