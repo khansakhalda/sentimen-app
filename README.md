@@ -98,24 +98,27 @@ Analisis dilakukan menggunakan pendekatan **filtering berbasis kata kunci (regex
 ## 🚀 Cara Menjalankan Aplikasi
 
 ### ▶️ Menjalankan Secara Lokal
+
 1. Clone repositori ini:
 ```bash
 git clone https://github.com/khansakhalda/sentimen-app.git
 cd sentimen-app
+Install dependensi:
 
-2. Install dependensi:
-```bash
+bash
+Salin kode
 pip install -r requirements.txt
+Jalankan aplikasi Streamlit:
 
-3. Jalankan aplikasi Streamlit:
-```bash
+bash
+Salin kode
 streamlit run streamlit_app.py
+Akses aplikasi melalui browser:
 
-4. Akses aplikasi melalui browser:
-```bash
+bash
+Salin kode
 http://localhost:8501
-
-## 👩‍🎓 Penulis
+👩‍🎓 Penulis
 Khansa Khalda
 Program Studi Informatika | Universitas Jenderal Soedirman
 Analisis Sentimen Ulasan Aplikasi Getcontact
