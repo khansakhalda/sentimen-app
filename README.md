@@ -104,15 +104,18 @@ git clone https://github.com/khansakhalda/sentimen-app.git
 cd sentimen-app
 
 2. Install dependensi:
+```bash
 pip install -r requirements.txt
 
 3. Jalankan aplikasi Streamlit:
+```bash
 streamlit run streamlit_app.py
 
 4. Akses aplikasi melalui browser:
+```bash
 http://localhost:8501
 
-👩‍🎓 Penulis
+## 👩‍🎓 Penulis
 Khansa Khalda
 Program Studi Informatika | Universitas Jenderal Soedirman
 Analisis Sentimen Ulasan Aplikasi Getcontact
